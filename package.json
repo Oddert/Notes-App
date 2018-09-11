@@ -1,0 +1,29 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "A basic cloud note-taking app.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oddert/notes-app.git"
+  },
+  "author": "Robyn Veitch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oddert/notes-app/issues"
+  },
+  "homepage": "https://github.com/Oddert/notes-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "mongoose": "^5.2.14"
+  }
+}
