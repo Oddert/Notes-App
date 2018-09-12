@@ -1,0 +1,24 @@
+.oContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: green;
+}
+
+.oContainer .col {
+  min-height: 200px;
+  background-color: #bec3c7;
+  flex: 1;
+}
+
+.oContainer .left {
+  border: 1px solid green;
+  flex: 1;
+
+}
+
+.oContainer .right {
+  border: 1px solid purple;
+  flex: 3;
+  
+}
