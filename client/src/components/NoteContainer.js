@@ -17,15 +17,15 @@ class NoteContainer extends React.Component {
     .then(res => res.json())
     .then(res => {
       if (res.err) console.log(res.err)
-      else this.props.getNotes(res.notes)
+      else this.props.getNotes(res.notes.reverse())
     })
   }
 
   render() {
     return (
       <div className='noteContainer'>
-        Status: {this.props.status}
-        {this.props.open
+        Status: {this.props.editor.status}
+        {typeof this.props.editor.open === 'number'
           ? <Note />
           : <div>Open a Note to Get Started</div>
         }
@@ -36,8 +36,7 @@ class NoteContainer extends React.Component {
 
 const mapStateToProps = state => ({
   notes: state.notes,
-  open: state.open,
-  status: state.status
+  editor: state.editor
 })
 
 const mapDispatchToProps = dispatch => ({

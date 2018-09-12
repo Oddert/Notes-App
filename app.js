@@ -28,10 +28,11 @@ app.get('/api/notes', (req, res) => {
 
 app.put('/api/notes', (req, res) => {
   console.log('request recieved to make new note...')
-  Note.create({ name: 'First note', body: 'no body this time' })
-  .exec((err, note) => {
-    if (err) console.log(err)
-    else res.status(200).json({ note })
+  Note.create(
+    { name: 'Untitled Note', body: '' },
+    (err, note) => {
+      if (err) console.log(err)
+      else res.status(200).json({ note })
   })
 })
 

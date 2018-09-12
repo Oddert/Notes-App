@@ -13,13 +13,15 @@ class NoteMenu extends React.Component {
       body: JSON.stringify({})
     })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(res => {
+      if (res.err) console.log(res.err)
+      else this.props.newNote(res.note)
+    })
   }
 
   render() {
     return (
       <div className='noteMenu'>
-        Note menu
         <button onClick={this.handleClick.bind(this)}>+</button>
       </div>
     )
@@ -27,7 +29,7 @@ class NoteMenu extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  newNote: () => dispatch(newNote())
+  newNote: payload => dispatch(newNote(payload))
 })
 
 export default connect(null, mapDispatchToProps)(NoteMenu)

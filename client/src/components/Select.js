@@ -2,6 +2,8 @@ import React from 'react'
 
 import { connect } from 'react-redux'
 
+import SelectNote from './SelectNote'
+
 import './styles/Select.css'
 
 class Select extends React.Component {
@@ -12,7 +14,7 @@ class Select extends React.Component {
         <ul>
           {this.props.notes.length > 0
             ? this.props.notes.map((each, idx) =>
-              <li key={idx}>{each.name}</li>
+              <SelectNote key={idx} index={idx} item={each} />
             )
             : <div>No Items</div>}
         </ul>
