@@ -12,3 +12,5 @@ const NoteSchema = new mongoose.Schema ({
     default: Date.now
   }
 })
+
+module.exports = mongoose.model('note-app-note', NoteSchema)

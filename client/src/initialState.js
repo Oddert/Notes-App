@@ -1,6 +1,9 @@
 const initialState = {
   notes: [],
-  open: null
+  editor: {
+    open: null,
+    status: 'none'
+  }
 }
 
 export default initialState

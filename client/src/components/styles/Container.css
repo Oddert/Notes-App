@@ -6,7 +6,6 @@
 }
 
 .oContainer .col {
-  min-height: 200px;
   background-color: #bec3c7;
   flex: 1;
 }

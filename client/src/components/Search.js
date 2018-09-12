@@ -1,9 +1,13 @@
 import React from 'react'
 
+import './styles/Search.css'
+
 class Search extends React.Component {
   render() {
     return (
-      <div>Search Bar goes here</div>
+      <div className='search'>
+        Search Bar goes here
+      </div>
     )
   }
 }

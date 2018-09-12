@@ -20,9 +20,18 @@ app.get('/api/test', (req, res) => res.json({ message: 'Server working ok.' }))
 
 app.get('/api/notes', (req, res) => {
   Note.find({})
-  .then((err, notes) => {
-    if (err) handleError(res, err)
+  .exec((err, notes) => {
+    if (err) console.log(err)
     else res.status(200).json({ notes })
+  })
+})
+
+app.put('/api/notes', (req, res) => {
+  console.log('request recieved to make new note...')
+  Note.create({ name: 'First note', body: 'no body this time' })
+  .exec((err, note) => {
+    if (err) console.log(err)
+    else res.status(200).json({ note })
   })
 })
 
