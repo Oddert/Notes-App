@@ -8,11 +8,8 @@ import './styles/Select.css'
 
 class Select extends React.Component {
   render () {
-    let notes = [...this.props.notes]
-
     return (
       <div className='select'>
-        <p>Menu select: </p>
         <ul>
           {this.props.notes.length > 0
             ? this.props.notes

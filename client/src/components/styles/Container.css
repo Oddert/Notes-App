@@ -10,20 +10,22 @@
 }
 
 .top {
-  min-height: 30px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .oContainer .left {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   flex: 1;
+  max-width: 30vw;
 
 }
 
 .oContainer .right {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   flex: 3;
-
+  display: flex;
+  flex-direction: column;
 }

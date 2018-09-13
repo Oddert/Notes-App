@@ -1,0 +1,14 @@
+.new {
+  border: 1px solid rgba(255,255,255,0);
+  border-radius: 50%;
+  padding: 0px 8px;
+  font-size: 1.7em;
+  font-weight: 500;
+  background-color: #fff;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.new:hover {
+  border: 1px solid steelblue;
+}

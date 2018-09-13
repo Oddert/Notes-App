@@ -4,14 +4,20 @@
   cursor: pointer;
   padding: 10px 0px;
   transition: .05s linear;
+  transition: background .1s linear;
 }
 
 .selectNote:hover {
-  transition: background .1s linear;
+  transition: border .1s linear;
+  border: 1px solid steelblue;
   background-color: rgba(250,250,250,1);
 }
 
 .selectNote.active {
-  border: 1px solid steelblue;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.selectNote:active {
+  transition: background .1s linear;
+  background-color: rgba(230, 230, 230, 1);
 }

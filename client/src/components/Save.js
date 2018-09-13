@@ -11,8 +11,9 @@ class Save extends React.Component {
     let item = Object.assign({}, this.props.notes[idx])
     delete item.unsaved
     console.log('going to send: ')
+    console.log(idx)
     console.log(item)
-    if (idx) {
+    if (typeof idx === 'number') {
       fetch('/api/notes', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },

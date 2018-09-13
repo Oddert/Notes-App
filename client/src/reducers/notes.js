@@ -4,7 +4,8 @@ import {
   GET_NOTES,
   NEW_NOTE,
   UPDATE_NOTE,
-  RESAVE_NOTE
+  RESAVE_NOTE,
+  DELETE_NOTE
 } from '../actions/types'
 
 const notes = (state = initialState.notes, action) => {
@@ -36,6 +37,8 @@ const notes = (state = initialState.notes, action) => {
           unsaved: false
         })
       return resaveNoteState
+    case DELETE_NOTE:
+      return [...state].slice(0, action.payload).concat([...state].slice(action.payload+1))
     default:
       return state
   }

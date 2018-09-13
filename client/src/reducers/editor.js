@@ -1,6 +1,6 @@
 import initialState from '../initialState'
 
-import { NEW_NOTE, SELECT_NOTE } from '../actions/types'
+import { NEW_NOTE, SELECT_NOTE, DELETE_NOTE } from '../actions/types'
 
 const editor = (state = initialState.editor, action) => {
   switch (action.type) {
@@ -8,6 +8,8 @@ const editor = (state = initialState.editor, action) => {
       return Object.assign({}, state, { open: 0, status: 'editing' })
     case SELECT_NOTE:
       return Object.assign({}, state, { open: action.payload })
+    case DELETE_NOTE:
+      return Object.assign({}, state, { open: action.payload-1 })
     default:
       return state
   }

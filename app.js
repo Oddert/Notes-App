@@ -57,6 +57,13 @@ app.put('/api/notes', (req, res) => {
   })
 })
 
+app.delete('/api/notes', (req, res) => {
+  Note.findByIdAndRemove(req.body._id, (err, found) => {
+    if (err) console.log(err)
+    else res.status(200).json({ deleted: true })
+  })
+})
+
 
 
 app.get('*', (req, res) => {

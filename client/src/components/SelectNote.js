@@ -17,7 +17,7 @@ class SelectNote extends React.Component {
         className={classInput}
       >
         <p>{this.props.item.name} {note.unsaved ? ' •' : ''}</p>
-        <p>{note.body.substring(0, 20)}</p>
+        <p>{note.body.substring(0, 40)}{note.body.length > 40 ? '...' : ''}</p>
       </li>
     )
   }

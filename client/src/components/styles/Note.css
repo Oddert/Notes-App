@@ -1,0 +1,53 @@
+
+
+.note {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px 0px 0px 10px;
+}
+
+textarea {
+  font-family: arial, cursive, sans-serif;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  transition: .1s linear;
+}
+
+.title {
+  align-self: flex-start;
+  min-width: 90%;
+  font-size: 1.25em;
+  padding: 15px 15px 8px 15px;
+  border-bottom: 1px solid #ecf0f1;
+
+  /* overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  width: auto; */
+}
+
+.title:focus {
+  border-bottom: 1px solid #bec3c7;
+}
+
+.title-meta {
+  text-align: right;
+}
+
+.title-meta p {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  margin-right: 35px;
+  font-size: 0.8em;
+  color: #95a5a5;
+  letter-spacing: 2px;
+}
+
+.body {
+  flex: 1;
+  padding: 10px 0px 0px 0px;
+}

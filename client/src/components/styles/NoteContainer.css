@@ -1,3 +1,4 @@
 .noteContainer {
-  border: 3px dashed #2d3e50;
+  border: 1px dashed #2d3e50;
+  flex: 1;
 }

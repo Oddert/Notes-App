@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import { search } from '../actions'
 
+import New from './New'
+
 import './styles/Search.css'
 
 class Search extends React.Component {
@@ -15,6 +17,7 @@ class Search extends React.Component {
           onChange={() => this.props.search(this.search.value)}
           placeholder='Search'
         />
+        <New />
       </div>
     )
   }
