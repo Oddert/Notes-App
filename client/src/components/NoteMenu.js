@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 
 import { newNote } from '../actions'
 
+import Save from './Save'
+
 import './styles/NoteMenu.css'
 
 class NoteMenu extends React.Component {
   handleClick () {
     fetch('/api/notes', {
-      method: 'PUT',
+      method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({})
     })
@@ -23,6 +25,7 @@ class NoteMenu extends React.Component {
     return (
       <div className='noteMenu'>
         <button onClick={this.handleClick.bind(this)}>+</button>
+        <Save />
       </div>
     )
   }

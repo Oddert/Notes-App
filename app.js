@@ -14,6 +14,8 @@ const Note = require('./models/Note')
 mongoose.connect(process.env.DATABASE, () => console.log('DB connection'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(cookieParser())
 app.use(express.static(path.join(__dirname + '/client/build')))
 
 app.get('/api/test', (req, res) => res.json({ message: 'Server working ok.' }))
@@ -26,7 +28,7 @@ app.get('/api/notes', (req, res) => {
   })
 })
 
-app.put('/api/notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
   console.log('request recieved to make new note...')
   Note.create(
     { name: 'Untitled Note', body: '' },
@@ -35,6 +37,25 @@ app.put('/api/notes', (req, res) => {
       else res.status(200).json({ note })
   })
 })
+
+app.put('/api/notes', (req, res) => {
+  console.log('Updating a note')
+  console.log(req.body);
+  Note.findById(req.body._id, (err, foundNote) => {
+    console.log('...note found:')
+    console.log(err)
+    console.log(foundNote)
+    foundNote.name = req.body.name
+    foundNote.body = req.body.body
+    foundNote.updated = req.body.updated
+    foundNote.save((err, note) => {
+      console.log('SAVE')
+      console.log(err)
+      console.log(note)
+      res.status(200).json({ note })
+    })
+  })
+});
 
 
 

@@ -15,7 +15,7 @@ class SelectNote extends React.Component {
         className={classInput}
       >
         {this.props.item.name}
-        {note.unsaved ? ' (unsaved)' : ''}
+        {note.unsaved ? ' ·' : ''}
       </li>
     )
   }
