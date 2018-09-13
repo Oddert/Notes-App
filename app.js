@@ -39,19 +39,11 @@ app.post('/api/notes', (req, res) => {
 })
 
 app.put('/api/notes', (req, res) => {
-  console.log('Updating a note')
-  console.log(req.body);
   Note.findById(req.body._id, (err, foundNote) => {
-    console.log('...note found:')
-    console.log(err)
-    console.log(foundNote)
     foundNote.name = req.body.name
     foundNote.body = req.body.body
     foundNote.updated = req.body.updated
     foundNote.save((err, note) => {
-      console.log('SAVE')
-      console.log(err)
-      console.log(note)
       res.status(200).json({ note })
     })
   })
