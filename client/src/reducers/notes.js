@@ -21,7 +21,7 @@ const notes = (state = initialState.notes, action) => {
       updateNoteState[action.payload.idx] = Object.assign({}, updateNoteState[action.payload.idx], {
         name: action.payload.name,
         body: action.payload.body,
-        updated: Date.now,
+        updated: Date.now(),
         unsaved: true
       })
       return updateNoteState

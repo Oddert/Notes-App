@@ -24,7 +24,6 @@ class Note extends React.Component {
     var note = this.props.notes[this.props.editor.open];
 
     if (this.state.idx !== this.props.editor.open) {
-      console.log('Editor idx not the same, updating...')
       if (this.state.edited) this.props.updateNote(this.state)
       this.setState({
         idx: this.props.editor.open,
@@ -32,8 +31,6 @@ class Note extends React.Component {
         body: note.body,
         edited: false
       })
-    } else {
-      console.log('Editor in sync')
     }
   }
 
@@ -61,13 +58,13 @@ class Note extends React.Component {
 
   render() {
     return (
-      <div onKeyDown={this.handleKeyDown}>
-        <p>Note index: {this.props.editor.open}</p>
+      <div>
+        {/* <p>Note index: {this.props.editor.open}</p> */}
         <label>Title: </label>
         <input name='name' onChange={this.handleChange} value={this.state.name} />
         <br />
         <label>Body: </label>
-        <input name='body' onChange={this.handleChange} value={this.state.body} />
+        <input name='body' onChange={this.handleChange} value={this.state.body} onKeyDown={this.handleKeyDown} />
       </div>
     )
   }

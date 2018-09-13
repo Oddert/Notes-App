@@ -24,7 +24,7 @@ class NoteContainer extends React.Component {
   render() {
     return (
       <div className='noteContainer'>
-        Status: {this.props.editor.status}
+        {/* Status: {this.props.editor.status} */}
         {typeof this.props.editor.open === 'number'
           ? <Note />
           : <div>Open a Note to Get Started</div>

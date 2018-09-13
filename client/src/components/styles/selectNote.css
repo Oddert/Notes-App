@@ -1,0 +1,17 @@
+.selectNote {
+  border: 1px solid #ecf0f1;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 10px 0px;
+  transition: .05s linear;
+}
+
+.selectNote:hover {
+  transition: background .1s linear;
+  background-color: rgba(250,250,250,1);
+}
+
+.selectNote.active {
+  border: 1px solid steelblue;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}

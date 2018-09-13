@@ -2,12 +2,18 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: green;
+  height: 100vh;
 }
 
 .oContainer .col {
-  background-color: #bec3c7;
   flex: 1;
+}
+
+.top {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .oContainer .left {
@@ -19,5 +25,5 @@
 .oContainer .right {
   border: 1px solid purple;
   flex: 3;
-  
+
 }

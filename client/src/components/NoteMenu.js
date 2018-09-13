@@ -23,7 +23,7 @@ class NoteMenu extends React.Component {
 
   render() {
     return (
-      <div className='noteMenu'>
+      <div className='noteMenu top'>
         <button onClick={this.handleClick.bind(this)}>+</button>
         <Save />
       </div>

@@ -55,7 +55,7 @@ app.put('/api/notes', (req, res) => {
       res.status(200).json({ note })
     })
   })
-});
+})
 
 
 
