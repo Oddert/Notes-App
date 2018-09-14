@@ -9,8 +9,6 @@ require('dotenv').config();
 
 const handleError = require('./locals/handleError');
 
-const Note = require('./models/Note')
-
 mongoose.connect(process.env.DATABASE, () => console.log('DB connection'))
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -18,44 +16,9 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname + '/client/build')))
 
-app.get('/api/test', (req, res) => res.json({ message: 'Server working ok.' }))
 
-app.get('/api/notes', (req, res) => {
-  Note.find({})
-  .exec((err, notes) => {
-    if (err) console.log(err)
-    else res.status(200).json({ notes })
-  })
-})
-
-app.post('/api/notes', (req, res) => {
-  console.log('request recieved to make new note...')
-  Note.create(
-    { name: 'Untitled Note', body: '' },
-    (err, note) => {
-      if (err) console.log(err)
-      else res.status(200).json({ note })
-  })
-})
-
-app.put('/api/notes', (req, res) => {
-  Note.findById(req.body._id, (err, foundNote) => {
-    foundNote.name = req.body.name
-    foundNote.body = req.body.body
-    foundNote.updated = req.body.updated
-    foundNote.save((err, note) => {
-      res.status(200).json({ note })
-    })
-  })
-})
-
-app.delete('/api/notes', (req, res) => {
-  Note.findByIdAndRemove(req.body._id, (err, found) => {
-    if (err) console.log(err)
-    else res.status(200).json({ deleted: true })
-  })
-})
-
+app.use('/api', require('./routes/api'))
+app.use('/auth', require('./routes/auth'))
 
 
 app.get('*', (req, res) => {
