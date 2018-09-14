@@ -10,6 +10,7 @@ class New extends React.Component {
     fetch('/api/notes', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({})
     })
     .then(res => res.json())

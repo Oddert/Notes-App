@@ -14,6 +14,7 @@ class Delete extends React.Component {
     fetch('/api/notes', {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify(item)
     })
     .then(res => res.json())

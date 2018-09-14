@@ -12,7 +12,8 @@ class NoteContainer extends React.Component {
   componentDidMount() {
     fetch('/api/notes', {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include'
     })
     .then(res => res.json())
     .then(res => {

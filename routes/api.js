@@ -1,7 +1,7 @@
 const router = require('express').Router()
-const mongoose = require('mongoose')
+    , mongoose = require('mongoose')
 
-const Note = require('../models/note')
+const Note = require('../models/Note')
 
 router.get('/test', (req, res) => res.json({ message: 'Server working ok.' }))
 
