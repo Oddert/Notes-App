@@ -4,7 +4,14 @@ const initialState = {
     open: null,
     status: 'none'
   },
-  search: ''
+  search: '',
+  auth: {
+    isAuth: false,
+    user: {
+      notes: [],
+      username: ''
+    }
+  }
 }
 
 export default initialState

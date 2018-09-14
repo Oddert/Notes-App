@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { updateAuth } from '../actions'
 
 import Search from './Search'
 import Select from './Select'
@@ -19,7 +22,29 @@ class Container extends React.Component {
   //   .then(res => console.log(res))
   // }
 
+  componentDidMount () {
+    fetch('/auth/ping', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include'
+    })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+      if (res.err) console.log(res.err)
+      else this.props.updateAuth(res)
+    })
+  }
+
   render() {
+    if (!this.props.auth.isAuth) {
+      return (
+        <a href='http://localhost:5000/auth/github'>
+          [DEV] Login With Github
+        </a>
+      )
+    }
+
     return (
       <div className='oContainer'>
         {/* <div>
@@ -46,4 +71,12 @@ class Container extends React.Component {
   }
 }
 
-export default Container
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+const mapDispatchToProps = dispatch => ({
+  updateAuth: payload => dispatch(updateAuth(payload))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Container)

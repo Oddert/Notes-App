@@ -17,6 +17,24 @@ router.get('/check', (req, res) => {
   })
 })
 
+router.get('/ping', (req, res) => {
+  if (req.isAuthenticated()) {
+    User.findById(req.user._id, (err, user) => {
+      if (err) console.log(err)
+      else res.status(200).json({
+        message: 'Auth test responding.'
+      , isAuth: req.isAuthenticated()
+      , user
+      })
+    })
+  } else {
+    res.status(200).json({
+      message: 'Auth test responding.'
+    , isAuth: req.isAuthenticated()
+    , user: null
+    })
+  }
+})
 
 router.get('/login', (req, res) => {
   console.log('/auth/github/login route')
