@@ -37,7 +37,8 @@ app.use('/api', require('./routes/api'))
 app.use('/auth', require('./routes/auth'))
 
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
+  console.log('Default route accessed')
   res.sendFile(path.join(__dirname + '/client/build/index.html'))
 })
 

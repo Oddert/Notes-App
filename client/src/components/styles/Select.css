@@ -1,5 +1,6 @@
 .select {
   /* border: 3px dashed steelblue; */
+  border-right:  1px solid #ecf0f1;
 }
 
 .select ul {

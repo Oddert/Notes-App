@@ -3,6 +3,8 @@ const router = require('express').Router()
 
 const Note = require('../models/Note')
 
+console.log('... /api routes loaded')
+
 router.get('/test', (req, res) => res.json({ message: 'Server working ok.' }))
 
 router.get('/notes', (req, res) => {

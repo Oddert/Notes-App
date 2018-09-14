@@ -8,26 +8,31 @@ import NoteContainer from './NoteContainer'
 import './styles/Container.css'
 
 class Container extends React.Component {
-  handleClick () {
-    fetch('/auth/check', {
-      method: 'GET',
-      credentials: 'include',
-      mode: 'no-cors'
-    })
-    .then(res => res.json())
-    .then(res => console.log(res))
-  }
+  // handleClick () {
+  //   fetch('/auth/check', {
+  //     method: 'GET',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     credentials: 'include',
+  //     mode: 'no-cors'
+  //   })
+  //   .then(res => res.json())
+  //   .then(res => console.log(res))
+  // }
 
   render() {
     return (
       <div className='oContainer'>
-        <div>
+        {/* <div>
           <button onClick={this.handleClick.bind(this)}>Check Auth</button>
           <br />
-          <a href='http://localhost:5000/auth/github' target='_blank' rel="noopener noreferrer">
-            Login With Github
+          <a href='http://localhost:5000/auth/github'>
+            [DEV] Login With Github
           </a>
-        </div>
+          <br />
+          <a href='/auth/github'>
+            [GLITCH] Login With Github
+          </a>
+        </div> */}
         <div className='col left'>
           <Search />
           <Select />
