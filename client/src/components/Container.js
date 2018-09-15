@@ -37,13 +37,13 @@ class Container extends React.Component {
   }
 
   render() {
-    if (!this.props.auth.isAuth) {
-      return (
-        <a href='http://localhost:5000/auth/github'>
-          [DEV] Login With Github
-        </a>
-      )
-    }
+    // if (!this.props.auth.isAuth) {
+    //   return (
+    //     <a href='http://localhost:5000/auth/github'>
+    //       [DEV] Login With Github
+    //     </a>
+    //   )
+    // }
 
     return (
       <div className='oContainer'>

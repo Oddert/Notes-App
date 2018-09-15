@@ -55,9 +55,9 @@ class Note extends React.Component {
       <div className='note'>
         <textarea name='name' className='title' onChange={this.handleChange} value={this.state.name} rows='1' />
         <div className='title-meta'>
-          <div className='unsaved'>
+          {/* <div className='unsaved'>
             {note.unsaved ? ' •' : ''}
-          </div>
+          </div> */}
           <p>{new Date(note.updated).toLocaleDateString('en-GB')}</p>
           <p>{new Date(note.updated).toLocaleTimeString('en-GB').substring(0, 5)}</p>
         </div>

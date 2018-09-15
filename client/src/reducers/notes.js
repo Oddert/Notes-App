@@ -17,7 +17,6 @@ const notes = (state = initialState.notes, action) => {
     console.log('Adding new note')
       return [action.payload, ...state]
     case UPDATE_NOTE:
-      // console.log(action.payload)
       let updateNoteState = [...state]
       updateNoteState[action.payload.idx] = Object.assign({}, updateNoteState[action.payload.idx], {
         name: action.payload.name,

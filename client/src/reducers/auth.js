@@ -7,7 +7,7 @@ const auth = (state = initialState.auth, action) => {
     case UPDATE_AUTH:
       console.log('auth reducer:')
       console.log(action.payload)
-      return Object.assign({}, state, { isAuth: action.payload.isAuth })
+      return Object.assign({}, state, { isAuth: action.payload.isAuth, user: action.payload.user })
     default:
       return state
   }

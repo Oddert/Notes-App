@@ -9,7 +9,7 @@ const editor = (state = initialState.editor, action) => {
     case SELECT_NOTE:
       return Object.assign({}, state, { open: action.payload })
     case DELETE_NOTE:
-      return Object.assign({}, state, { open: action.payload-1 })
+      return Object.assign({}, state, { open: action.payload < 1 ? null : action.payload-1 })
     default:
       return state
   }

@@ -10,6 +10,13 @@ const NoteSchema = new mongoose.Schema ({
   updated: {
     type: Date,
     default: Date.now
+  },
+  author: {
+    username: String,
+    id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'note-app-user'
+    }
   }
 })
 
