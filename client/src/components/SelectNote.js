@@ -7,6 +7,7 @@ import './styles/selectNote.css'
 
 class SelectNote extends React.Component {
   render () {
+    if (this.props.hidden) return <div />
     let note = this.props.notes[this.props.index];
     let classInput = this.props.editor.open === this.props.index
                       ? 'selectNote active'
