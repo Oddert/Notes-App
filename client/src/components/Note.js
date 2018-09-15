@@ -12,7 +12,8 @@ class Note extends React.Component {
       idx: null,
       edited: false,
       name: '',
-      body: ''
+      body: '',
+      tags: ''
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -30,7 +31,8 @@ class Note extends React.Component {
         idx: this.props.editor.open,
         name: note.name,
         body: note.body,
-        edited: false
+        edited: false,
+        tags: note.tags.join(', ')
       })
     }
   }
@@ -53,11 +55,9 @@ class Note extends React.Component {
 
     return (
       <div className='note'>
+        <textarea name='tags' className='tags' onChange={this.handleChange} value={this.state.tags} rows='1' placeholder='Tags, comma seperated' />
         <textarea name='name' className='title' onChange={this.handleChange} value={this.state.name} rows='1' />
         <div className='title-meta'>
-          {/* <div className='unsaved'>
-            {note.unsaved ? ' •' : ''}
-          </div> */}
           <p>{new Date(note.updated).toLocaleDateString('en-GB')}</p>
           <p>{new Date(note.updated).toLocaleTimeString('en-GB').substring(0, 5)}</p>
         </div>

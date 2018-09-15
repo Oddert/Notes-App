@@ -27,6 +27,7 @@ const notes = (state = initialState.notes, action) => {
         name: action.payload.name,
         body: action.payload.body,
         updated: Date.now(),
+        tags: action.payload.tags,
         unsaved: true
       })
       return updateNoteState

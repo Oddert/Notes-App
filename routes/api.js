@@ -65,6 +65,7 @@ router.put('/notes', (req, res) => {
     foundNote.name = req.body.name
     foundNote.body = req.body.body
     foundNote.updated = req.body.updated
+    foundNote.tags = req.body.tags
     foundNote.save((err, note) => {
       res.status(200).json({ note })
     })

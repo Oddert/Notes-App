@@ -8,7 +8,13 @@ import { saveNote, resaveNote } from '../actions'
 class Save extends React.Component {
   handleClick () {
     let idx = this.props.editor.open
-    let item = Object.assign({}, this.props.notes[idx])
+    let stateItem = this.props.notes[idx]
+    console.log(stateItem)
+    let item = Object.assign(
+      {},
+      stateItem,
+      { tags: stateItem.tags.split(',') }
+    )
     delete item.unsaved
     console.log('going to send: ')
     console.log(idx)

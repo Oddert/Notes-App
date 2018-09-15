@@ -16,6 +16,10 @@ textarea {
   transition: .1s linear;
 }
 
+.tags {
+  border: 1px dashed #ecf0f1;
+}
+
 .title {
   align-self: flex-start;
   min-width: 90%;

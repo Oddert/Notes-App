@@ -11,17 +11,6 @@ import NoteContainer from './NoteContainer'
 import './styles/Container.css'
 
 class Container extends React.Component {
-  // handleClick () {
-  //   fetch('/auth/check', {
-  //     method: 'GET',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     credentials: 'include',
-  //     mode: 'no-cors'
-  //   })
-  //   .then(res => res.json())
-  //   .then(res => console.log(res))
-  // }
-
   componentDidMount () {
     fetch('/auth/ping', {
       method: 'GET',
@@ -37,14 +26,6 @@ class Container extends React.Component {
   }
 
   render() {
-    // if (!this.props.auth.isAuth) {
-    //   return (
-    //     <a href='http://localhost:5000/auth/github'>
-    //       [DEV] Login With Github
-    //     </a>
-    //   )
-    // }
-
     return (
       <div className='oContainer'>
         {/* <div>
