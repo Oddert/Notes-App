@@ -17,7 +17,8 @@ const NoteSchema = new mongoose.Schema ({
       type: mongoose.Schema.Types.ObjectId,
       ref: 'note-app-user'
     }
-  }
+  },
+  tags: [String]
 })
 
 module.exports = mongoose.model('note-app-note', NoteSchema)

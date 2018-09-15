@@ -34,7 +34,7 @@ class Auth extends React.Component {
           <i className={this.state.open ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
         </button>
         {this.state.open
-          ? <div className='account-dropdown'>
+          ? <div className='account dropdown'>
               <a href='/logout'>Logout</a>
             </div>
           : ''}

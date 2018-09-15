@@ -1,0 +1,82 @@
+
+
+.order-container {
+  text-align: right;
+}
+
+.order-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 99vh;
+  /* background-color: rgba(0,0,0, .3); */
+}
+
+.order-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .8em;
+  color: rgba(41, 127, 184, 1);
+}
+
+.order-button:hover {
+  text-decoration: underline;
+}
+
+.order-button:active {
+  color: rgba(11, 97, 154, 1);
+}
+
+.order-container i {
+  font-weight: 700;
+}
+
+.order-drop-container {
+  /* border: 1px solid blue; */
+  position: absolute;
+  width: 99%;
+  display: flex;
+}
+
+.temp {
+  /* border: 1px solid orange; */
+  flex: 1;
+  max-width: 30vw;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 99;
+}
+
+.dropdown.order {
+  display: flex;
+  flex-direction: column;
+  position: initial;
+  /* border: 1px solid red; */
+}
+
+.order-drop-counter {
+  flex: 3;
+  /* border: 1px solid black; */
+}
+
+.order-option {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(41, 127, 184, 1);
+  font-size: .9em;
+  font-weight: 700;
+  text-align: left;
+}
+
+.order-option:hover {
+  text-decoration: underline;
+}
+
+.order-option.active {
+  color: rgba(1, 87, 124, 1);
+  text-decoration: underline;
+}

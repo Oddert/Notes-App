@@ -7,7 +7,8 @@ import {
   RESAVE_NOTE,
   SEARCH,
   DELETE_NOTE,
-  UPDATE_AUTH
+  UPDATE_AUTH,
+  REARRANGE_NOTES
 } from './types'
 
 export const getNotes = payload => ({
@@ -52,5 +53,10 @@ export const deleteNote = payload => ({
 
 export const updateAuth = payload => ({
   type: UPDATE_AUTH,
+  payload
+})
+
+export const rearrangeNotes = payload => ({
+  type: REARRANGE_NOTES,
   payload
 })

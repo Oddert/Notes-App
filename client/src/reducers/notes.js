@@ -5,7 +5,8 @@ import {
   NEW_NOTE,
   UPDATE_NOTE,
   RESAVE_NOTE,
-  DELETE_NOTE
+  DELETE_NOTE,
+  REARRANGE_NOTES
 } from '../actions/types'
 
 const notes = (state = initialState.notes, action) => {
@@ -16,6 +17,10 @@ const notes = (state = initialState.notes, action) => {
     case NEW_NOTE:
     console.log('Adding new note')
       return [action.payload, ...state]
+    case REARRANGE_NOTES:
+      console.log('rearange notes')
+      console.log(action.payload)
+      return action.payload
     case UPDATE_NOTE:
       let updateNoteState = [...state]
       updateNoteState[action.payload.idx] = Object.assign({}, updateNoteState[action.payload.idx], {

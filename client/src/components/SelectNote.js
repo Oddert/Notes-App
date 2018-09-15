@@ -20,6 +20,7 @@ class SelectNote extends React.Component {
         <div className='preview-text'>
           {note.title !== "" ? <p className='select-title'>{this.props.item.name}</p> : ''}
           {note.body !== "" ? <p className='select-body'>{note.body.substring(0, 40)}{note.body.length > 40 ? '...' : ''}</p> : ''}
+          <p className='select-date'>{new Date(note.updated).toLocaleDateString()}   |   {new Date(note.updated).toLocaleTimeString()}</p>
         </div>
         <div className='save-indicator'>
           {note.unsaved ? ' •' : ''}

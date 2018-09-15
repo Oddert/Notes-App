@@ -1,6 +1,7 @@
 import React from 'react'
-
 import { connect } from 'react-redux'
+
+import Order from './Order'
 
 import SelectNote from './SelectNote'
 
@@ -11,6 +12,7 @@ class Select extends React.Component {
     const searchTerm = RegExp(this.props.search.toLowerCase(), "g")
     return (
       <div className='select'>
+        <Order />
         <ul>
           {this.props.notes.length > 0
             ? this.props.notes
