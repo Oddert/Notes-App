@@ -42,12 +42,13 @@ router.get('/login', (req, res) => {
 })
 
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   console.log('Logging user out')
-  res.logOut();
-  res.status(200).json({
-    logout: true
-  })
+  req.logout()
+  res.redirect('/')
+  // res.status(200).json({
+  //   logout: true
+  // })
 })
 
 router.get('/github', passport.authenticate('github', {
