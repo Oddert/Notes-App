@@ -38,7 +38,7 @@ class Auth extends React.Component {
         </button>
         {this.state.open
           ? <div className='account dropdown'>
-              <a href='/logout'>Logout</a>
+              <a href='/auth/logout'>Logout</a>
             </div>
           : ''}
       </div>
