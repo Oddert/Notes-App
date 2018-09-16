@@ -2,4 +2,29 @@
   /* border: 3px dashed lightgreen; */
   border-bottom:  1px solid #ecf0f1;
   /* border-left:  1px solid #ecf0f1; */
+  display: flex;
+}
+
+.auth {
+  padding: 0px 15px;
+}
+
+.github-login {
+  background: linear-gradient(#444, #24292E);
+  color: #fff;
+  text-decoration: none;
+  font-size: .7em;
+  border-radius: 10px;
+  padding: 5px 8px;
+}
+
+.github-login:active {
+  background: linear-gradient(#24292E, #444);
+}
+
+.noteMenu-options {
+  flex: 1;
+  display: flex;
+  padding: 0px 30px;
+  align-items: flex-start;
 }

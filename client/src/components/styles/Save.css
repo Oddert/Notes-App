@@ -1,0 +1,15 @@
+.save_icon-1, .save_icon-2 {
+  fill: none;
+  stroke: rgba(21, 107, 164, 1);
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+}
+
+.save_icon-2 {
+  stroke-linecap: round;
+}
+
+.icon:hover svg .save_icon-1, .icon:hover svg .save_icon-2 {
+  stroke: #496583;
+  fill: rgba(39,174,97, 1);
+}

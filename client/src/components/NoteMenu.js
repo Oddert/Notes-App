@@ -10,8 +10,10 @@ class NoteMenu extends React.Component {
   render() {
     return (
       <div className='noteMenu top'>
-        <Save />
-        <Delete />
+        <div className='noteMenu-options'>
+          <Save />
+          <Delete />
+        </div>
         <Auth />
       </div>
     )

@@ -32,6 +32,10 @@ textarea {
   color: #bec3c7;
 }
 
+.tags textarea::placeholder {
+  color: #bec3c7;
+}
+
 .tags label {
   font-size: .8em;
 }

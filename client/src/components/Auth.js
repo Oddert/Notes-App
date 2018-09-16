@@ -19,16 +19,16 @@ class Auth extends React.Component {
   render () {
     if (!this.props.auth.isAuth) {
       return (
-        <div>
-          <a href='http://localhost:5000/auth/github'>
-            [DEV] Login With Github
+        <div className='auth'>
+          <a href='http://localhost:5000/auth/github' className='github-login'>
+            <i className='fa fa-github'></i> Login With Github
           </a>
         </div>
       )
     }
 
     return (
-      <div>
+      <div className='auth'>
         <button onClick={this.handleClick} className='drop-button'>
           {this.props.auth.user.username + ' '}
           <i className={this.state.open ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>

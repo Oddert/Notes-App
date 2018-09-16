@@ -54,3 +54,42 @@
 .dropdown a {
   text-decoration: none;
 }
+
+
+
+/* ICONS */
+
+.icon {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  height: 20px;
+  width: 20px;
+  transition: .1s linear;
+}
+
+.delete_icon-1, .delete_icon-2, .delete_icon-3 {
+  fill: none;
+  stroke: rgba(21, 107, 164, 1);
+  stroke-miterlimit: 10;
+}
+
+.delete_icon-2, .delete_icon-3 {
+  stroke-width: 10px;
+}
+
+.delete_icon-3 {
+  stroke-linecap: round;
+}
+
+.icon:hover svg .delete_icon-2, .icon:hover svg .delete_icon-3 {
+  stroke: #496583;
+  fill: rgba(232,76,61, 1);
+  /* fill: #e84c3d; */
+}
