@@ -37,6 +37,12 @@ class Order extends React.Component {
       case 3:
         newNotes = newNotes.sort((a, b) => new Date(a.updated) > new Date(b.updated) ? -1 : 1)
         break;
+      case 4:
+        newNotes = newNotes.sort((a, b) => new Date(a.created) > new Date(b.created) ? -1 : 1)
+        break;
+      case 5:
+        newNotes = newNotes.sort((a, b) => new Date(a.created) > new Date(b.created) ? 1 : -1)
+        break;
       default:
         break;
     }
@@ -52,8 +58,10 @@ class Order extends React.Component {
     const options = [
       'Alphabetical A - z',
       'Alphabetical Z - a',
-      'Date (newer)',
-      'Date (older)'
+      'Recently Updated',
+      'Oldest Updated',
+      'Newer',
+      'Older'
     ]
     return (
       <div className='order-container'>

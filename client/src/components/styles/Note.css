@@ -1,4 +1,8 @@
-
+.pre-open {
+  color: #7e8c8d;
+  font-family: 'josefin sans', arial, helvetica;
+  margin-top: 40px;
+}
 
 .note {
   display: flex;
