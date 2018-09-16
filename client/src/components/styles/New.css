@@ -7,8 +7,9 @@
   background-color: #fff;
   cursor: pointer;
   transition: .2s linear;
+  box-sizing: border-box;
 }
 
 .new:hover {
-  border: 1px solid steelblue;
+  border: 1px solid rgba(41, 127, 184, 1);
 }

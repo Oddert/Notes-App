@@ -17,7 +17,27 @@ textarea {
 }
 
 .tags {
-  border: 1px dashed #ecf0f1;
+  border-bottom: 1px dashed #ecf0f1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #bec3c7;
+  transition: .1s linear;
+}
+
+.tags textarea {
+  flex: 1;
+  /* border: 1px dashed #ecf0f1; */
+  margin-left: 10px;
+  color: #bec3c7;
+}
+
+.tags label {
+  font-size: .8em;
+}
+
+.tags textarea:focus {
+  color: #556c82;
 }
 
 .title {

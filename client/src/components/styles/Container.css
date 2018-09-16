@@ -41,6 +41,16 @@
   position: absolute;
 }
 
+.drop-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .8em;
+  color: rgba(41, 127, 184, 1);
+  z-index: 300;
+}
+
 .dropdown a {
   text-decoration: none;
 }

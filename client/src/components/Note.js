@@ -55,7 +55,10 @@ class Note extends React.Component {
 
     return (
       <div className='note'>
-        <textarea name='tags' className='tags' onChange={this.handleChange} value={this.state.tags} rows='1' placeholder='Tags, comma seperated' />
+        <div className='tags'>
+          <label htmlFor='note-tags'>Tags: </label>
+          <textarea name='tags' onChange={this.handleChange} value={this.state.tags} rows='1' placeholder='Tags, comma seperated' id='note-tags' />
+        </div>
         <textarea name='name' className='title' onChange={this.handleChange} value={this.state.name} rows='1' />
         <div className='title-meta'>
           <p>{new Date(note.updated).toLocaleDateString('en-GB')}</p>

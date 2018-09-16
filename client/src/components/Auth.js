@@ -29,7 +29,7 @@ class Auth extends React.Component {
 
     return (
       <div>
-        <button onClick={this.handleClick}>
+        <button onClick={this.handleClick} className='drop-button'>
           {this.props.auth.user.username + ' '}
           <i className={this.state.open ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
         </button>

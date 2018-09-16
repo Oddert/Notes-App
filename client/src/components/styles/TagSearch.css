@@ -1,0 +1,16 @@
+.tagSearch {
+  /* border: 1px solid black; */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tagSearch textarea {
+  /* border: 1px solid red; */
+  font-size: .7em;
+  border-bottom: 1px solid #ecf0f1;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 4px 0px;
+}

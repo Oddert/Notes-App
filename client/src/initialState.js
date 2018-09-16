@@ -5,6 +5,7 @@ const initialState = {
     status: 'none'
   },
   search: '',
+  tags: [],
   auth: {
     isAuth: false,
     user: {

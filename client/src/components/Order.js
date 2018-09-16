@@ -59,7 +59,7 @@ class Order extends React.Component {
       <div className='order-container'>
         <button
           onClick={this.toggleOpen}
-          className='order-button'
+          className='drop-button'
         >
           Sort <i className={this.state.open ? 'fa fa-angle-up' : 'fa fa-angle-down'}></i>
         </button>

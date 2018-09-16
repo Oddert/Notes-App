@@ -12,8 +12,7 @@ class Save extends React.Component {
     console.log(stateItem)
     let item = Object.assign(
       {},
-      stateItem,
-      { tags: stateItem.tags.split(',') }
+      stateItem
     )
     delete item.unsaved
     console.log('going to send: ')
