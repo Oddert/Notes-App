@@ -20,7 +20,10 @@ class Auth extends React.Component {
     if (!this.props.auth.isAuth) {
       return (
         <div className='auth'>
-          <a href='http://localhost:5000/auth/github' className='github-login'>
+          {/* <a href='http://localhost:5000/auth/github' className='github-login'>
+            <i className='fa fa-github'></i> Login With Github
+          </a> */}
+          <a href='/auth/github' className='github-login'>
             <i className='fa fa-github'></i> Login With Github
           </a>
         </div>
