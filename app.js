@@ -4,11 +4,22 @@ const express       = require('express'),
       cookieParser  = require('cookie-parser'),
       path          = require('path'),
       mongoose      = require('mongoose'),
-      passport      = require('passport');
+      passport      = require('passport'),
+      helmet        = require('helmet');
 
 const passportSetup = require('./locals/passport-setup')
 
 require('dotenv').config();
+
+app.use(helmet({
+  frameguard: {
+    action: 'deny'
+  },
+  hidePoweredBy: {
+    setTo: 'PHP 7.2.0'
+  },
+  dnsPrefetchControl: true
+}))
 
 const handleError = require('./locals/handleError');
 
